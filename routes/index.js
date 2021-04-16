@@ -8,6 +8,6 @@ router.get('/', function(req, res, next) {
 //Agregar Ruta *7
 router.get('/greeting',function(req, res, next){
   res.send('Jessica Mondragón <3')
-})
+});
 
 module.exports = router;
