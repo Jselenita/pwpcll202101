@@ -18,19 +18,19 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+/*app.use(express.static(path.join(__dirname, 'public')));
 app.get("/saludo",function(req, res,next){
   console.log(req.ip)
   console.log("Saludo")
  next()
 },function(req,res,next){
   res.json({"mensaje":"Hola buen día"})
-})
-/*
-app.use('/', indexRouter);
-app.use('/users', usersRouter);*/
+})*/
 
-// catch 404 and forward to error handler
+app.use('/', indexRouter);
+app.use('/users', usersRouter);
+
+//catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
 });
